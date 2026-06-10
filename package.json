@@ -1,11 +1,15 @@
 {
+  "homepage": "https://haris-r.github.io/Portfolio",
   "name": "portfolio_nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
-    "start": "next start"
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
+    "start": "next start",
+    "export": "next export",
+    "predeploy": "npm run build && npm run export",
+    "deploy": "gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "next": "10.2.3",
@@ -18,5 +22,9 @@
   },
   "engines": {
     "node": "18.x"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "cross-env": "^7.0.3"
   }
 }
