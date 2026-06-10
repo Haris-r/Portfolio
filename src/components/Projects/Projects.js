@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 import {
   BlogCard,
@@ -29,14 +28,7 @@ const Projects = () => (
       {projects.map((p, i) => {
         return (
           <BlogCard key={i}>
-            <Image
-              src={p.image}
-              alt={p.title}
-              width={300}
-              height={200}
-              unoptimized
-              style={{ width: "100%", height: "auto" }}
-            />
+            <Img src={p.image} />
             <TitleContent>
               <HeaderThree title>{p.title}</HeaderThree>
               <Hr />
