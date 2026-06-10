@@ -34,6 +34,7 @@ const Projects = () => (
               alt={p.title}
               width={300}
               height={200}
+              unoptimized
               style={{ width: "100%", height: "auto" }}
             />
             <TitleContent>
